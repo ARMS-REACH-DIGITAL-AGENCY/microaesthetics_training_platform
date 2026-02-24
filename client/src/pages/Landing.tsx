@@ -240,15 +240,102 @@ export default function Landing() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Package 1: Certification */}
+            {/* Package 1: Digital Learning */}
             <div className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition">
               <div className="bg-gradient-to-r from-accent/10 to-accent/5 p-6 border-b border-border">
-                <h3 className="text-xl font-bold text-foreground">Certification Program</h3>
-                <p className="text-sm text-muted-foreground mt-2">Professional Laser Technician</p>
+                <h3 className="text-xl font-bold text-foreground">Digital Learning</h3>
+                <p className="text-sm text-muted-foreground mt-2">Learn. Upgrade. Explore.</p>
               </div>
               <div className="p-6 space-y-6">
                 <div>
-                  <p className="text-3xl font-bold text-accent">$2,500</p>
+                  <p className="text-3xl font-bold text-accent">$497+</p>
+                  <p className="text-sm text-muted-foreground">Individual courses</p>
+                </div>
+                <div className="space-y-3">
+                  <p className="font-semibold text-foreground">Includes:</p>
+                  <ul className="space-y-2 text-sm text-foreground">
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>100% online access</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>On-demand modules</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Instant access</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Global reach</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Flexible scheduling</span>
+                    </li>
+                  </ul>
+                </div>
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white">
+                  Explore Courses
+                </Button>
+              </div>
+            </div>
+
+            {/* Package 2: Fast Track Skill Training */}
+            <div className="border-2 border-accent rounded-lg overflow-hidden hover:shadow-lg transition relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold">
+                Most Popular
+              </div>
+              <div className="bg-gradient-to-r from-accent to-accent/80 p-6 border-b border-accent text-white">
+                <h3 className="text-xl font-bold">Fast Track Skill Training</h3>
+                <p className="text-sm text-accent-foreground/90 mt-2">Upgrade your skills quickly</p>
+              </div>
+              <div className="p-6 space-y-6">
+                <div>
+                  <p className="text-3xl font-bold text-accent">$3,700</p>
+                  <p className="text-sm text-muted-foreground">Hands-on training</p>
+                </div>
+                <div className="space-y-3">
+                  <p className="font-semibold text-foreground">Includes:</p>
+                  <ul className="space-y-2 text-sm text-foreground">
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Condensed hands-on sessions</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Laser protocols & techniques</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Live model training</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Flexible scheduling</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>No state certification</span>
+                    </li>
+                  </ul>
+                </div>
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white">
+                  Enroll Now
+                </Button>
+              </div>
+            </div>
+
+            {/* Package 3: State Certification Track */}
+            <div className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition">
+              <div className="bg-gradient-to-r from-accent/10 to-accent/5 p-6 border-b border-border">
+                <h3 className="text-xl font-bold text-foreground">State Certification Track</h3>
+                <p className="text-sm text-muted-foreground mt-2">Get certified. Get legal. Get ahead.</p>
+              </div>
+              <div className="p-6 space-y-6">
+                <div>
+                  <p className="text-3xl font-bold text-accent">$10,500</p>
                   <p className="text-sm text-muted-foreground">Complete certification</p>
                 </div>
                 <div className="space-y-3">
@@ -256,115 +343,28 @@ export default function Landing() {
                   <ul className="space-y-2 text-sm text-foreground">
                     <li className="flex gap-2">
                       <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>All 5 chapters of training</span>
+                      <span>40-hour didactic (board reported)</span>
                     </li>
                     <li className="flex gap-2">
                       <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Comprehensive curriculum</span>
+                      <span>24 hours hands-on training</span>
                     </li>
                     <li className="flex gap-2">
                       <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Final certification exam</span>
+                      <span>10 required applications</span>
                     </li>
                     <li className="flex gap-2">
                       <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Lifetime access to materials</span>
+                      <span>ADHS submission & certification</span>
                     </li>
                     <li className="flex gap-2">
                       <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Email support</span>
+                      <span>Graduation certificate</span>
                     </li>
                   </ul>
                 </div>
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white">
-                  Enroll Now
-                </Button>
-              </div>
-            </div>
-
-            {/* Package 2: Professional License */}
-            <div className="border-2 border-accent rounded-lg overflow-hidden hover:shadow-lg transition relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold">
-                Most Popular
-              </div>
-              <div className="bg-gradient-to-r from-accent to-accent/80 p-6 border-b border-accent text-white">
-                <h3 className="text-xl font-bold">Professional License</h3>
-                <p className="text-sm text-accent-foreground/90 mt-2">Advanced Certification + License</p>
-              </div>
-              <div className="p-6 space-y-6">
-                <div>
-                  <p className="text-3xl font-bold text-accent">$5,500</p>
-                  <p className="text-sm text-muted-foreground">Professional certification</p>
-                </div>
-                <div className="space-y-3">
-                  <p className="font-semibold text-foreground">Includes:</p>
-                  <ul className="space-y-2 text-sm text-foreground">
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Everything in Certification</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Professional licensing exam prep</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Advanced hands-on training</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Business & compliance guide</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Priority email & phone support</span>
-                    </li>
-                  </ul>
-                </div>
-                <Button className="w-full bg-accent hover:bg-accent/90 text-white">
-                  Enroll Now
-                </Button>
-              </div>
-            </div>
-
-            {/* Package 3: Franchise */}
-            <div className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition">
-              <div className="bg-gradient-to-r from-accent/10 to-accent/5 p-6 border-b border-border">
-                <h3 className="text-xl font-bold text-foreground">Franchise Partnership</h3>
-                <p className="text-sm text-muted-foreground mt-2">Build Your Own Training Business</p>
-              </div>
-              <div className="p-6 space-y-6">
-                <div>
-                  <p className="text-3xl font-bold text-accent">$10,500</p>
-                  <p className="text-sm text-muted-foreground">Complete franchise package</p>
-                </div>
-                <div className="space-y-3">
-                  <p className="font-semibold text-foreground">Includes:</p>
-                  <ul className="space-y-2 text-sm text-foreground">
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Everything in Professional License</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Franchise business license</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Complete curriculum package</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Marketing & branding materials</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Dedicated franchise support</span>
-                    </li>
-                  </ul>
-                </div>
-                <Button className="w-full bg-accent hover:bg-accent/90 text-white">
-                  Learn More
+                  Apply Now
                 </Button>
               </div>
             </div>
@@ -422,8 +422,8 @@ export default function Landing() {
                 a: "We provide career guidance and connect graduates with industry opportunities.",
               },
               {
-                q: "What's included in the franchise package?",
-                a: "The franchise includes curriculum, marketing materials, ongoing support, and licensing to use the MicroAesthetics Method.",
+                q: "What's the difference between the three paths?",
+                a: "Digital Learning is 100% online for flexible learning. Fast Track offers hands-on skills without state certification. State Certification Track provides full ADHS certification and legal authorization to practice.",
               },
             ].map((item, i) => (
               <div key={i} className="border border-border rounded-lg p-6">
