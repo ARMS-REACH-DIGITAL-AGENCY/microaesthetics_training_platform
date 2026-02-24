@@ -96,3 +96,95 @@ export const leads = mysqlTable("leads", {
 
 export type Lead = typeof leads.$inferSelect;
 export type InsertLead = typeof leads.$inferInsert;
+/**
+ * Student profile with enrollment agreement data
+ */
+export const studentProfiles = mysqlTable("student_profiles", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id),
+  firstName: varchar("firstName", { length: 255 }).notNull(),
+  lastName: varchar("lastName", { length: 255 }).notNull(),
+  middleName: varchar("middleName", { length: 255 }),
+  email: varchar("email", { length: 320 }).notNull(),
+  phone: varchar("phone", { length: 20 }).notNull(),
+  dateOfBirth: varchar("dateOfBirth", { length: 10 }),
+  socialSecurityNumber: varchar("socialSecurityNumber", { length: 11 }),
+  driverLicenseNumber: varchar("driverLicenseNumber", { length: 20 }),
+  driverLicenseState: varchar("driverLicenseState", { length: 2 }),
+  mailingAddress: varchar("mailingAddress", { length: 500 }),
+  mailingCity: varchar("mailingCity", { length: 100 }),
+  mailingState: varchar("mailingState", { length: 2 }),
+  mailingZip: varchar("mailingZip", { length: 10 }),
+  professionalLicenseType: varchar("professionalLicenseType", { length: 100 }),
+  professionalLicenseNumber: varchar("professionalLicenseNumber", { length: 50 }),
+  professionalLicenseState: varchar("professionalLicenseState", { length: 2 }),
+  emergencyContactName: varchar("emergencyContactName", { length: 255 }),
+  emergencyContactPhone: varchar("emergencyContactPhone", { length: 20 }),
+  enrollmentPathway: mysqlEnum("enrollmentPathway", ["certification", "license", "franchise", "free"]).default("free").notNull(),
+  enrollmentDate: timestamp("enrollmentDate"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type StudentProfile = typeof studentProfiles.$inferSelect;
+export type InsertStudentProfile = typeof studentProfiles.$inferInsert;
+
+/**
+ * Training session tracking (login/logout timestamps)
+ */
+export const trainingSessions = mysqlTable("training_sessions", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id),
+  chapterId: varchar("chapterId", { length: 64 }).notNull().default("chapter_1"),
+  loginTimestamp: timestamp("loginTimestamp").notNull(),
+  logoutTimestamp: timestamp("logoutTimestamp"),
+  totalSessionTimeSeconds: int("totalSessionTimeSeconds").default(0),
+  sessionStatus: mysqlEnum("sessionStatus", ["active", "completed", "abandoned"]).default("active").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type TrainingSession = typeof trainingSessions.$inferSelect;
+export type InsertTrainingSession = typeof trainingSessions.$inferInsert;
+
+/**
+ * Slide-level progress tracking
+ */
+export const slideProgress = mysqlTable("slide_progress", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id),
+  chapterId: varchar("chapterId", { length: 64 }).notNull().default("chapter_1"),
+  slideNumber: int("slideNumber").notNull(),
+  audioLengthSeconds: int("audioLengthSeconds").notNull(),
+  timeSpentSeconds: int("timeSpentSeconds").notNull().default(0),
+  audioPlayed: int("audioPlayed").notNull().default(0),
+  audioFinished: int("audioFinished").notNull().default(0),
+  completedAt: timestamp("completedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type SlideProgress = typeof slideProgress.$inferSelect;
+export type InsertSlideProgress = typeof slideProgress.$inferInsert;
+
+/**
+ * Exam attempts with detailed tracking
+ */
+export const examAttempts = mysqlTable("exam_attempts", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id),
+  chapterId: varchar("chapterId", { length: 64 }).notNull().default("chapter_1"),
+  attemptNumber: int("attemptNumber").notNull().default(1),
+  startTime: timestamp("startTime").notNull(),
+  endTime: timestamp("endTime"),
+  durationSeconds: int("durationSeconds"),
+  score: int("score"),
+  totalQuestions: int("totalQuestions").notNull(),
+  passingScore: int("passingScore").notNull().default(80),
+  passed: int("passed").notNull().default(0),
+  answers: text("answers"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type ExamAttempt = typeof examAttempts.$inferSelect;
+export type InsertExamAttempt = typeof examAttempts.$inferInsert;
