@@ -48,28 +48,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* About the School Section */}
-      <section className="py-16 md:py-20 px-4 bg-white">
-        <div className="container max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              About The MicroAesthetics Laser Tech Institute
-            </h2>
-          </div>
-          <div className="prose prose-sm max-w-none text-foreground space-y-4">
-            <p>
-              The MicroAesthetics Laser Tech Institute is Arizona's premier training facility for aspiring laser technicians. Founded on the principle that professional laser education should be accessible, comprehensive, and practical, we've trained hundreds of successful laser technicians who are now thriving in the aesthetic and medical laser industry.
-            </p>
-            <p>
-              Our curriculum is built on real-world experience and the latest industry standards. We don't just teach theory—we teach the practical skills, safety protocols, and professional knowledge you need to succeed as a certified laser technician.
-            </p>
-            <p>
-              Whether you're looking to start a new career, expand your existing business, or become a franchise partner, the MicroAesthetics Laser Tech Institute provides the education and support you need to achieve your goals.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* About Isabel Section */}
       <section className="py-16 md:py-20 px-4 bg-muted">
         <div className="container max-w-5xl mx-auto">
@@ -142,6 +120,37 @@ export default function Landing() {
               <p className="font-semibold text-accent pt-4">
                 — iZabel, Founder of the MicroAesthetics Method
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About the School Section */}
+      <section className="py-16 md:py-20 px-4 bg-white">
+        <div className="container max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                About The MicroAesthetics Laser Tech Institute
+              </h2>
+              <div className="space-y-4 text-foreground leading-relaxed">
+                <p>
+                  The MicroAesthetics Laser Tech Institute is Arizona's premier training facility for aspiring laser technicians. Founded on the principle that professional laser education should be accessible, comprehensive, and practical, we've trained hundreds of successful laser technicians who are now thriving in the aesthetic and medical laser industry.
+                </p>
+                <p>
+                  Our curriculum is built on real-world experience and the latest industry standards. We don't just teach theory—we teach the practical skills, safety protocols, and professional knowledge you need to succeed as a certified laser technician.
+                </p>
+                <p>
+                  Whether you're looking to start a new career, expand your existing business, or advance your professional credentials, the MicroAesthetics Laser Tech Institute provides the education and support you need to achieve your goals.
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
+                alt="MicroAesthetics Institute Building"
+                className="rounded-lg shadow-lg w-full h-auto object-cover max-w-md"
+              />
             </div>
           </div>
         </div>
