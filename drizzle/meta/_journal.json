@@ -1,5 +1,27 @@
 {
   "version": "7",
   "dialect": "mysql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1771775463502,
+      "tag": "0000_familiar_warstar",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1771775821385,
+      "tag": "0001_mighty_ultron",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1771781765915,
+      "tag": "0002_stormy_madame_masque",
+      "breakpoints": true
+    }
+  ]
 }
