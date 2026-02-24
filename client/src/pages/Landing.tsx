@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Landing() {
   const [, navigate] = useLocation();
@@ -26,145 +26,51 @@ export default function Landing() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-20 px-4 bg-gradient-to-b from-background to-muted">
-        <div className="container max-w-4xl mx-auto text-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-foreground mb-2">
-            The Micro Aesthetics Laser Tech Institute
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-4 font-semibold">
-            Home of the MicroAesthetics Method by iZabel™
-          </p>
-          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Master laser safety certification and become a certified laser technician. Start with our completely free Chapter 1 introduction to laser industry laws and regulations—no credit card required, no obligation to continue.
-          </p>
-          <Button
-            size="lg"
-            className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg"
-            onClick={() => navigate("/lead-capture")}
-          >
-            Start Your Free Training
-          </Button>
-        </div>
-      </section>
-
-      {/* About Isabel Section */}
-      <section className="py-16 md:py-20 px-4 bg-muted">
+      {/* HERO SECTION - Minimal, Direct, Action-Focused */}
+      <section className="py-12 md:py-16 px-4 bg-gradient-to-b from-background to-muted">
         <div className="container max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                Meet iZabel
-              </h2>
-              <div className="space-y-4 text-foreground">
-                <p>
-                  iZabel is the founder of the MicroAesthetics Method and a recognized expert in aesthetic laser technology. With over 20 years of experience in the laser industry, she has dedicated her career to advancing professional standards and educating the next generation of laser technicians.
-                </p>
-                <p>
-                  Her innovative teaching methodology combines cutting-edge laser science with practical, hands-on training. Students consistently praise her ability to make complex technical concepts accessible and engaging.
-                </p>
-                <div className="pt-4 space-y-2">
-                  <p className="font-semibold text-accent">Credentials & Expertise:</p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Certified Laser Safety Officer</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>ANSI Z136.3 Compliance Expert</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Founder of the MicroAesthetics Method</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Industry Speaker & Consultant</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <div className="grid md:grid-cols-3 gap-8 items-center">
+            {/* Left: Main Message */}
+            <div className="md:col-span-2">
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+                Get Licensed as a Laser Technician in 40 Hours
+              </h1>
+              <p className="text-lg text-muted-foreground mb-2">
+                Master Arizona's laser safety regulations and industry standards
+              </p>
+              <p className="text-base text-muted-foreground mb-6">
+                Free Chapter 1 training reveals everything you need to know about laser laws, agencies, and ANSI standards—no credit card required.
+              </p>
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg"
+                onClick={() => navigate("/lead-capture")}
+              >
+                Get Free Chapter 1
+              </Button>
             </div>
-            <div className="flex justify-center">
+
+            {/* Right: Small Isabel Image */}
+            <div className="flex justify-center md:justify-end">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/wsfdHBiAIbeBmhbN.png"
                 alt="iZabel - Founder"
-                className="w-full max-w-sm rounded-lg shadow-lg"
+                className="w-full max-w-xs rounded-lg shadow-lg"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Welcome Message Section */}
+      {/* CHAPTER 1 PREVIEW - Show Them What They'll Get */}
       <section className="py-16 md:py-20 px-4 bg-white">
-        <div className="container max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-accent/10 to-accent/5 p-8 md:p-12 rounded-lg border border-accent/20">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
-              A Personal Welcome from iZabel
-            </h3>
-            <div className="space-y-4 text-foreground leading-relaxed">
-              <p>
-                Welcome to the MicroAesthetics Laser Tech Institute. I'm thrilled you're considering this journey into the laser technology field.
-              </p>
-              <p>
-                Over my 20+ years in this industry, I've seen firsthand how transformative proper laser education can be. The difference between a mediocre laser technician and an exceptional one isn't just technical knowledge—it's a commitment to safety, continuous learning, and professional excellence.
-              </p>
-              <p>
-                That's why I created this training program. I wanted to build something that goes beyond the basics and truly prepares you for success. Our free Chapter 1 is just the beginning—it's designed to give you a taste of what professional laser education should be.
-              </p>
-              <p>
-                Whether you're just exploring the field or ready to commit to a full certification, I'm here to support your journey. Let's build something amazing together.
-              </p>
-              <p className="font-semibold text-accent pt-4">
-                — iZabel, Founder of the MicroAesthetics Method
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About the School Section */}
-      <section className="py-16 md:py-20 px-4 bg-white">
-        <div className="container max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                About The MicroAesthetics Laser Tech Institute
-              </h2>
-              <div className="space-y-4 text-foreground leading-relaxed">
-                <p>
-                  The MicroAesthetics Laser Tech Institute is Arizona's premier training facility for aspiring laser technicians. Founded on the principle that professional laser education should be accessible, comprehensive, and practical, we've trained hundreds of successful laser technicians who are now thriving in the aesthetic and medical laser industry.
-                </p>
-                <p>
-                  Our curriculum is built on real-world experience and the latest industry standards. We don't just teach theory—we teach the practical skills, safety protocols, and professional knowledge you need to succeed as a certified laser technician.
-                </p>
-                <p>
-                  Whether you're looking to start a new career, expand your existing business, or advance your professional credentials, the MicroAesthetics Laser Tech Institute provides the education and support you need to achieve your goals.
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
-                alt="MicroAesthetics Institute Building"
-                className="rounded-lg shadow-lg w-full h-auto object-cover max-w-md"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Chapter 1 Preview Section */}
-      <section className="py-16 md:py-20 px-4 bg-muted">
         <div className="container max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
               Chapter 1: Introduction to Laser Industry Laws & Agencies
             </h2>
-            <p className="text-muted-foreground">
-              Your free preview - completely complimentary, no strings attached
+            <p className="text-muted-foreground text-lg">
+              Your free preview—completely complimentary, no strings attached
             </p>
           </div>
 
@@ -204,184 +110,209 @@ export default function Landing() {
                 </div>
                 <div>
                   <p className="font-semibold text-accent">Format</p>
-                  <p>37 professional slides with expert narration</p>
+                  <p>36 professional slides with expert narration</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-accent">Instructor</p>
-                  <p>iZabel - Founder of the MicroAesthetics Method</p>
+                  <p className="font-semibold text-accent">Access</p>
+                  <p>Instant access after signing up</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-accent">Assessment</p>
-                  <p>End-of-chapter quiz to test your knowledge</p>
+                  <p className="font-semibold text-accent">Certificate</p>
+                  <p>Quiz at the end with instant results</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-lg text-center">
-            <h3 className="text-lg font-semibold text-foreground mb-4">
-              Ready to Start Your Journey?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              No credit card required. No obligation to continue. Just pure, professional laser safety education.
-            </p>
+          <div className="text-center">
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-white"
+              className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg"
               onClick={() => navigate("/lead-capture")}
             >
-              Access Chapter 1 Now
+              Start Your Free Training Now
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Three Packages Section */}
-      <section className="py-16 md:py-20 px-4 bg-white">
+      {/* THREE PATHS - The Value Ladder */}
+      <section className="py-16 md:py-20 px-4 bg-muted">
         <div className="container max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Choose Your Path to Success
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+              One Institute. Three Paths. Your Future.
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Three flexible options designed for different goals and timelines
+            <p className="text-muted-foreground text-lg">
+              The MicroAesthetics Method™: One platform, three distinct journeys.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Package 1: Digital Learning */}
-            <div className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition">
-              <div className="bg-gradient-to-r from-accent/10 to-accent/5 p-6 border-b border-border">
-                <h3 className="text-xl font-bold text-foreground">Digital Learning</h3>
-                <p className="text-sm text-muted-foreground mt-2">Learn. Upgrade. Explore.</p>
+            {/* Path 1: Digital Learning */}
+            <div className="bg-blue-50 rounded-lg p-8 border border-blue-200">
+              <h3 className="text-xl font-bold text-blue-900 mb-2">
+                DIGITAL LEARNING:
+              </h3>
+              <p className="text-lg font-bold text-blue-900 mb-6">
+                START LEARNING TODAY
+              </p>
+              <div className="mb-6 h-32 flex items-center justify-center">
+                <div className="text-6xl">📱</div>
               </div>
-              <div className="p-6 space-y-6">
-                <div>
-                  <p className="text-3xl font-bold text-accent">$497+</p>
-                  <p className="text-sm text-muted-foreground">Individual courses</p>
-                </div>
-                <div className="space-y-3">
-                  <p className="font-semibold text-foreground">Includes:</p>
-                  <ul className="space-y-2 text-sm text-foreground">
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>100% online access</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>On-demand modules</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Instant access</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Global reach</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Flexible scheduling</span>
-                    </li>
-                  </ul>
-                </div>
-                <Button className="w-full bg-accent hover:bg-accent/90 text-white">
-                  Explore Courses
-                </Button>
-              </div>
+              <ul className="space-y-2 text-sm text-foreground">
+                <li className="flex gap-2">
+                  <span className="text-blue-600">●</span>
+                  <span>100% online, on-demand modules</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-blue-600">●</span>
+                  <span>Covering laser physics and safety basics for curious learners.</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Package 2: Fast Track Skill Training */}
-            <div className="border-2 border-accent rounded-lg overflow-hidden hover:shadow-lg transition relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold">
-                Most Popular
+            {/* Path 2: Fast Track (Most Popular) */}
+            <div className="bg-orange-50 rounded-lg p-8 border-2 border-orange-400 relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-400 text-white px-4 py-1 rounded-full text-xs font-bold">
+                MOST POPULAR
               </div>
-              <div className="bg-gradient-to-r from-accent to-accent/80 p-6 border-b border-accent text-white">
-                <h3 className="text-xl font-bold">Fast Track Skill Training</h3>
-                <p className="text-sm text-accent-foreground/90 mt-2">Upgrade your skills quickly</p>
+              <h3 className="text-xl font-bold text-orange-900 mb-2">
+                FAST TRACK:
+              </h3>
+              <p className="text-lg font-bold text-orange-900 mb-6">
+                HANDS-ON SKILL MASTERY
+              </p>
+              <div className="mb-6 h-32 flex items-center justify-center">
+                <div className="text-6xl">🔧</div>
               </div>
-              <div className="p-6 space-y-6">
-                <div>
-                  <p className="text-3xl font-bold text-accent">$3,700</p>
-                  <p className="text-sm text-muted-foreground">Hands-on training</p>
-                </div>
-                <div className="space-y-3">
-                  <p className="font-semibold text-foreground">Includes:</p>
-                  <ul className="space-y-2 text-sm text-foreground">
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Condensed hands-on sessions</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Laser protocols & techniques</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Live model training</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Flexible scheduling</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>No state certification</span>
-                    </li>
-                  </ul>
-                </div>
-                <Button className="w-full bg-accent hover:bg-accent/90 text-white">
-                  Enroll Now
-                </Button>
-              </div>
+              <ul className="space-y-2 text-sm text-foreground">
+                <li className="flex gap-2">
+                  <span className="text-orange-600">★</span>
+                  <span>Focused, condensed training with live models</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-orange-600">★</span>
+                  <span>For experienced practitioners adding new skills without state certification.</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Package 3: State Certification Track */}
-            <div className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition">
-              <div className="bg-gradient-to-r from-accent/10 to-accent/5 p-6 border-b border-border">
-                <h3 className="text-xl font-bold text-foreground">State Certification Track</h3>
-                <p className="text-sm text-muted-foreground mt-2">Get certified. Get legal. Get ahead.</p>
+            {/* Path 3: State Certification */}
+            <div className="bg-green-50 rounded-lg p-8 border border-green-200">
+              <h3 className="text-xl font-bold text-green-900 mb-2">
+                STATE CERTIFICATION:
+              </h3>
+              <p className="text-lg font-bold text-green-900 mb-6">
+                BECOME A LICENSED PROFESSIONAL
+              </p>
+              <div className="mb-6 h-32 flex items-center justify-center">
+                <div className="text-6xl">🏆</div>
               </div>
-              <div className="p-6 space-y-6">
-                <div>
-                  <p className="text-3xl font-bold text-accent">$10,500</p>
-                  <p className="text-sm text-muted-foreground">Complete certification</p>
-                </div>
-                <div className="space-y-3">
-                  <p className="font-semibold text-foreground">Includes:</p>
-                  <ul className="space-y-2 text-sm text-foreground">
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>40-hour didactic (board reported)</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>24 hours hands-on training</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>10 required applications</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>ADHS submission & certification</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span>Graduation certificate</span>
-                    </li>
-                  </ul>
-                </div>
-                <Button className="w-full bg-accent hover:bg-accent/90 text-white">
-                  Apply Now
-                </Button>
-              </div>
+              <ul className="space-y-2 text-sm text-foreground">
+                <li className="flex gap-2">
+                  <span className="text-green-600">🛡</span>
+                  <span>The premium Arizona track</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-green-600">🛡</span>
+                  <span>Featuring 40 hours of didactic learning and 24 hours of hands-on application for full licensure.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section (Placeholder) */}
+      {/* SOCIAL PROOF - Quick Credibility */}
+      <section className="py-12 md:py-16 px-4 bg-white">
+        <div className="container max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <p className="text-3xl font-bold text-accent mb-2">500+</p>
+              <p className="text-foreground">Graduates Trained</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-accent mb-2">95%</p>
+              <p className="text-foreground">Certification Success Rate</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-accent mb-2">20+</p>
+              <p className="text-foreground">Years of Industry Experience</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT ISABEL - Build Trust in the Guide */}
+      <section className="py-16 md:py-20 px-4 bg-muted">
+        <div className="container max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Meet Your Instructor: iZabel
+              </h2>
+              <div className="space-y-4 text-foreground">
+                <p>
+                  iZabel is the founder of the MicroAesthetics Method and a recognized expert in aesthetic laser technology. With over 20 years of experience in the laser industry, she has dedicated her career to advancing professional standards and educating the next generation of laser technicians.
+                </p>
+                <div className="pt-4 space-y-2">
+                  <p className="font-semibold text-accent">Credentials & Expertise:</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Certified Laser Safety Officer</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>ANSI Z136.3 Compliance Expert</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Founder of the MicroAesthetics Method</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Industry Speaker & Consultant</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/wsfdHBiAIbeBmhbN.png"
+                alt="iZabel - Founder"
+                className="w-full max-w-sm rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT THE SCHOOL - Lower Priority */}
+      <section className="py-16 md:py-20 px-4 bg-white">
+        <div className="container max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              About The MicroAesthetics Laser Tech Institute
+            </h2>
+          </div>
+          <div className="prose prose-sm max-w-none text-foreground space-y-4">
+            <p>
+              The MicroAesthetics Laser Tech Institute is Arizona's premier training facility for aspiring laser technicians. Founded on the principle that professional laser education should be accessible, comprehensive, and practical, we've trained hundreds of successful laser technicians who are now thriving in the aesthetic and medical laser industry.
+            </p>
+            <p>
+              Our curriculum is built on real-world experience and the latest industry standards. We don't just teach theory—we teach the practical skills, safety protocols, and professional knowledge you need to succeed as a certified laser technician.
+            </p>
+            <p>
+              Whether you're looking to start a new career, expand your existing business, or advance your professional credentials, the MicroAesthetics Laser Tech Institute provides the education and support you need to achieve your goals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
       <section className="py-16 md:py-20 px-4 bg-muted">
         <div className="container max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -408,7 +339,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* FAQ Section (Placeholder) */}
+      {/* FAQ */}
       <section className="py-16 md:py-20 px-4 bg-white">
         <div className="container max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -419,16 +350,16 @@ export default function Landing() {
           <div className="space-y-4">
             {[
               {
-                q: "How long does the certification take?",
-                a: "Most students complete the certification in 4-8 weeks, depending on their pace and schedule.",
+                q: "Is Chapter 1 really free?",
+                a: "Yes, completely free. No credit card required, no hidden fees, no obligation to continue.",
               },
               {
-                q: "Do I need prior experience?",
-                a: "No prior experience is required. Our curriculum is designed for beginners and experienced professionals alike.",
+                q: "How long does Chapter 1 take?",
+                a: "45-60 minutes of professional content covering laser laws, agencies, and ANSI standards.",
               },
               {
-                q: "Is there job placement assistance?",
-                a: "We provide career guidance and connect graduates with industry opportunities.",
+                q: "Will I get certified from Chapter 1?",
+                a: "Chapter 1 is a foundation course. Full certification requires the State Certification Track (40 hours didactic + 24 hours hands-on).",
               },
               {
                 q: "What's the difference between the three paths?",
@@ -444,21 +375,21 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
+      {/* FINAL CTA */}
       <section className="py-16 md:py-20 px-4 bg-gradient-to-r from-accent to-accent/80">
         <div className="container max-w-3xl mx-auto text-center text-white">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Ready to Start Your Journey?
+            Ready to Get Licensed?
           </h2>
           <p className="text-lg mb-8 text-accent-foreground/90">
-            Begin with our free Chapter 1 training. No credit card required, no obligation to continue.
+            Start with our free Chapter 1 training. No credit card required, no obligation to continue.
           </p>
           <Button
             size="lg"
             className="bg-white hover:bg-white/90 text-accent px-8 py-6 text-lg font-semibold"
             onClick={() => navigate("/lead-capture")}
           >
-            Start Your Free Training Now
+            Get Free Chapter 1 Now
           </Button>
         </div>
       </section>
