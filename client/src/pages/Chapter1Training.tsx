@@ -3,183 +3,271 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX, Clock } from "lucide-react";
 
-// Slide content data for Chapter 1
+// Slide content data for Chapter 1 - 33 slides from PowerPoint with Isabel's narration
 const CHAPTER1_SLIDES = [
   {
     id: 1,
-    title: "Welcome to Chapter 1",
-    subtitle: "Introduction to Laser Industry Laws & Agencies",
-    content: "This comprehensive introduction covers the regulatory landscape, safety standards, and professional requirements for laser technicians in Arizona.",
+    title: "Chapter 1",
+    subtitle: "Introduction to Laser Industry & AZ Laser Laws/Agencies",
+    content: "LASER INTERN EDITION\n\nIsabel's Microaesthetics Laser Tech Institute",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/iHpJsnsfRTjohxNN.wav",
     audioDuration: 36,
   },
   {
     id: 2,
-    title: "Important Disclaimer",
-    subtitle: "Before We Begin",
-    content: "This training is for educational purposes. Always follow local, state, and federal regulations. Consult with legal and medical professionals as needed.",
+    title: "Laws of the Laser",
+    subtitle: "Disclaimer",
+    content: "MicroAesthetics Laser Education is a licensed laser training center governed by the Arizona Department of Health Services (ADHS) and the Arizona Radiation Regulatory Agency (ARRA). Cosmetic laser treatments are classified as health and beauty treatments to improve the overall appearance of the skin. Cosmetic laser treatments are NOT medical treatments and should not be depicted as such, in any way that could be misinterpreted by the public.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/PlSvIfGYFHoDpDhl.wav",
-    audioDuration: 45,
+    audioDuration: 120,
   },
   {
     id: 3,
-    title: "Course Objectives",
-    subtitle: "What You'll Learn",
-    content: "By the end of this chapter, you will understand laser safety classifications, regulatory agencies, Arizona-specific requirements, and professional responsibilities.",
+    title: "Laws of the Laser",
+    subtitle: "Objectives",
+    content: "By the end of this class, the student will have a clear understanding of:\n\n• Certified Laser Technician Definition\n• Arizona Rules and Regulations of Agencies Governing Cosmetic Lasers\n• Laser Trends\n• The purpose of the ANSI Agency\n• Additional Government Agencies\n• The 4 classifications of lasers\n• Laser Safety Manager Responsibility\n• When to File an Incident Report\n• Laser Key Safety\n\nNote: A quiz will be administered upon completion of the chapter. A passing score of 80% is needed to continue with the next chapter.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/KcxAerLrZYQYJERu.wav",
-    audioDuration: 42,
+    audioDuration: 180,
   },
   {
     id: 4,
-    title: "Meet Your Instructor",
-    subtitle: "iZabel - Founder & Expert",
-    content: "With decades of experience in aesthetic laser technology, iZabel brings real-world expertise and practical knowledge to every lesson.",
+    title: "Laws of the Laser",
+    subtitle: "Certified Laser Technician",
+    content: "Who can perform laser and IPL treatments?\n\nCosmetic laser therapies are the processes of using light energy to treat imperfections and certain abnormalities skin conditions.\n\nEach state has its own requirements regarding:\n• Training Requirements\n• Laser School Curriculum and Criteria\n• Laser salons, medical spas, doctors' offices\n• Certification of people, training schools and facilities\n• Rules and regulations of use\n• Website for information on general regulations on a state-by-state basis\n• https://myethosspa.com",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/MvBVpfvpKQUlVIfe.wav",
-    audioDuration: 38,
+    audioDuration: 60,
   },
   {
     id: 5,
-    title: "Laser Industry Overview",
-    subtitle: "Market Trends & Growth",
-    content: "The aesthetic laser industry continues to grow at 12% annually. Understanding regulations is essential for professional success.",
+    title: "Laws of the Laser",
+    subtitle: "Certified Laser Technician",
+    content: "The career of a certified laser technician (CLT)...\n\n• A certified laser technician is a person who is certified/licensed by a state agency to perform cosmetic procedures that rejuvenate the skin and treat problems such as unwanted hair, cellulite, and tattoos.\n\n• You must complete state training requirements for laser application, laser safety, wound healing, skin physiology and histology, and laser fundamentals.\n\n• Laser technician training programs typically award a certificate upon completion.\n\n• Other Requirements: State Licensure/Certification\n\n• Education required; depends on each state",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/vyaPNZbaHHHWHXfe.wav",
-    audioDuration: 40,
+    audioDuration: 75,
   },
   {
     id: 6,
-    title: "What is a Certified Laser Technician?",
-    subtitle: "Professional Definition",
-    content: "A certified laser technician is a trained professional authorized to operate laser equipment for aesthetic and medical procedures under proper supervision.",
+    title: "Laws of the Laser",
+    subtitle: "Certified Laser Technician",
+    content: "Career of a Certified Laser Technician\n\n• Governed by the Boards of Radiology and/or Department of Health Services of each state\n\n• Cosmetic/Medical Industry\n\n• Some states have prerequisites and some don't.\n\n• Individual states will govern who can perform laser services in the state; i.e., medical, nonmedical, and beauty professionals\n\n• Each state will govern the number of hours and procedures for each program within the laser criteria. Some last as little as 2 weeks.\n\nIn Arizona it is the Arizona Department of Health Services (ADHS) for certification and renewals and ARRA agency for facility and device licensing and registration.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/chrSMGphFdszMHAV.wav",
-    audioDuration: 44,
+    audioDuration: 90,
   },
   {
     id: 7,
-    title: "Laser Industry Trends",
-    subtitle: "Current Market Landscape",
-    content: "Emerging technologies, increased consumer demand, and stricter regulations are shaping the future of laser services.",
+    title: "Laws of the Laser",
+    subtitle: "Laser Trends",
+    content: "Growth of the laser industry:\n\n• More than 2500 medical spas (Medi-spas or med-spas) opened in the United States alone in 2018\n\n• Industry of more than 10 billion dollars\n\n• More than $7 million was spent on Botox, dermal fillers, and laser hair removal in one year.\n\n• Employment opportunities include; specialty medical offices, dermatology, plastics, primary care practices, dental offices, obstetrics and gynecology clinics, working together with naturopathic doctors, gyms, hairdressers, beauty schools, and independent esthetician practices.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/cAKPjhwixoUtuNbK.wav",
-    audioDuration: 39,
+    audioDuration: 75,
   },
   {
     id: 8,
-    title: "ANSI Standards",
-    subtitle: "American National Standards Institute",
-    content: "ANSI sets the safety standards for laser equipment and operation. Understanding these standards is critical for compliance.",
+    title: "Laws of the Laser CLT Career",
+    subtitle: "Professional Growth",
+    content: "Professional Growth:\n• According to the U.S. Labor Office, the estimated labor market growth for skincare specialists will be more than 30% through 2025.\n\nJob Opportunities:\n• The job market for Laser Technicians has been growing exponentially every year, with an expected increase of almost 21% by 2024.\n\nWage:\n• The average BASE salary for a laser technician is between $44,800 and $45,600 per year, or $16.95 per hour to $21 per hour.\n\nAdditional experience and certification in multiple specialties will increase your salary.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ITtCTsBpsskFMOdH.wav",
-    audioDuration: 46,
+    audioDuration: 70,
   },
   {
     id: 9,
-    title: "Government Agencies",
-    subtitle: "Regulatory Bodies",
-    content: "Multiple agencies oversee laser technology including OSHA, FDA, ADHS, and state boards. Each has specific requirements.",
+    title: "Laws of the Laser History of Cosmetic Lasers",
+    subtitle: "Historical Timeline",
+    content: "History of Cosmetic Laser Therapy:\n\n• 1959 - Gordon Gould coined the term LASER, Amplification of Light by Stimulated Emission of Radiation.\n\n• 1964 - Kumar Patel introduces the carbon dioxide (CO2) laser for use in dermatology.\n\n• 1997 – Dr. Anderson and Dr. Grossman developed an FDA-approved hair removal laser.\n\n• 2004 - Fractional laser technology focused on anti-aging symptoms such as wrinkles, loss of elasticity, and superficial scarring of the skin.\n\n• 2020s: Advances in laser technology over the decades have been shown to combat the biological aging process of conditions such as skin rejuvenation, tattoo removal, scar reduction, and vascular and pigmentary conditions.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ZSrfDaItVuoVOaHr.wav",
-    audioDuration: 41,
+    audioDuration: 80,
   },
   {
     id: 10,
-    title: "Laser Classifications",
-    subtitle: "Safety Levels 1-4",
-    content: "Lasers are classified by power and safety risk. Class 1 is safest, Class 4 requires maximum precautions.",
+    title: "Laws of the Laser Cosmetic Lasers Treatments",
+    subtitle: "Treatment Services",
+    content: "Cosmetic Laser Services:\n\n• Acne scar reduction\n• Reduction of acquired hemangioma in adults\n• Cellulite reduction\n• Ephelis Reduction\n• Reduction of facial erythema\n• Hair Reduction\n• Laser peeling\n• Non-ablative skin resurfacing\n• Non-ablative tattoo removal\n• Skin Rejuvenation/Skin Tightening\n• Reduction of solar lentigo\n• Spider vein reduction\n• Reduction of telangiectasias\n• Wrinkle reduction",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/bGyGtIithjEqBKyg.wav",
-    audioDuration: 43,
+    audioDuration: 65,
   },
   {
     id: 11,
-    title: "Laser Safety Manager Responsibilities",
-    subtitle: "Key Duties",
-    content: "Safety managers ensure compliance, maintain equipment, conduct training, and manage incident reporting.",
+    title: "Laws of the Laser Cosmetic Lasers Treatments",
+    subtitle: "Skin Conditions Treated",
+    content: "Skin conditions treated with lasers:\n\n• Acne scar reduction: With proper application, the laser has the ability to reduce depth of a scar or minimize the elevation of a keloid.\n\n• Adult Acquired Hemangioma Reduction: These are visible red blood spots found anywhere on the body and are more common in the elderly.\n\n• Cellulite reduction: A disorder of adipose tissue (fat cells) that gives a wavy appearance to the skin, usually on the buttocks and thighs.\n\n• Ephelis reduction: Similar to freckles, but can have a red and brown coloration, mainly due to intense sun exposure.\n\n• Reduction of facial erythema: Redness of the face due to vascular skin conditions such as rosacea and/or port-wine stains.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/mTRlmieVlNxjwVUY.wav",
-    audioDuration: 47,
+    audioDuration: 85,
   },
   {
     id: 12,
-    title: "Incident Reporting",
-    subtitle: "When & How to Report",
-    content: "All laser-related incidents must be documented and reported to appropriate agencies within required timeframes.",
+    title: "Laws of the Laser Cosmetic Lasers Treatments",
+    subtitle: "More Skin Conditions",
+    content: "Skin conditions treated with lasers (continued):\n\n• Hair Reduction: Also known as hair removal that targets stem cells by removing the root of the hair shaft to stop hair growth with various treatments.\n\n• Laser Peel: Provides a topical exfoliation of dead skin cells by stimulating the integrity of collagen and elastin.\n\n• Non-ablative skin resurfacing: Laser treatments that penetrate deeper into the skin generating heat deeper than a laser peel such as a controlled burn without trauma to the upper layers of the skin.\n\n• Non-ablative tattoo removal: Calculated treatments performed with a laser beam on the skin to break up the tattoo ink.\n\n• Non-ablative lasers: Less invasive than their ablative counterpart for skin rejuvenation and photodamage to eliminate wrinkles, stimulate collagen and elastin and promote cell renewal.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/KouVSVBdzXtXAtyf.wav",
-    audioDuration: 40,
+    audioDuration: 80,
   },
   {
     id: 13,
-    title: "Laser Key Safety",
-    subtitle: "Equipment Access Control",
-    content: "Laser equipment must be secured with proper key management to prevent unauthorized access and misuse.",
+    title: "Laws of the Laser Cosmetic Lasers Treatments",
+    subtitle: "Additional Skin Conditions",
+    content: "Skin conditions treated with lasers (continued):\n\n• Skin tightening (resurfacing): Laser treatments that tighten the skin by stimulating fibroblasts to tighten the collagen/elastin network.\n\n• Solar lentigo reduction: The reduction of skin pigmentation from freckles or age spots caused by the sun.\n\n• Spider vein reduction: This differs from telangiectasia in that spider veins appear as thin, red lines or as web-like networks of blood vessels on the surface of the skin. Spider veins, a mild form of varicose veins, usually appear on the legs and feet.\n\n• Telangiectasia reduction: Also known as broken capillaries, they are small dilated blood vessels near the surface of the skin and are usually found on the face in the thinnest area of skin.\n\n• Wrinkle Reduction—Wrinkle reduction laser treatments that focus on minimizing lines and wrinkles on the face.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/pvriupuushsPfrGq.wav",
-    audioDuration: 38,
+    audioDuration: 85,
   },
   {
     id: 14,
-    title: "End of Chapter Quiz",
-    subtitle: "Test Your Knowledge",
-    content: "You've completed the content. Now take the quiz to test your understanding. You need 80% to pass.",
+    title: "Laws of the Laser",
+    subtitle: "Laws and Regulations",
+    content: "The medical director, doctor, nurse practitioners, and CLT are all responsible for any mishaps of a patient.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/GyFxUQNHHIWezgwj.wav",
-    audioDuration: 35,
+    audioDuration: 30,
   },
   {
     id: 15,
-    title: "Arizona Department of Health Services",
-    subtitle: "ADHS Requirements",
-    content: "ADHS oversees healthcare professionals in Arizona. Laser technicians must comply with state-specific regulations.",
+    title: "Laws of the Laser",
+    subtitle: "Laws and Regulations",
+    content: "AZ Agencies Governing Cosmetic Laser Technicians, Facilities and Technicians:\n\n• Arizona Department of Health Services\n\n• Arizona Radiology Regulatory Agency",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/HUspkHZJVDzRahSj.wav",
-    audioDuration: 42,
+    audioDuration: 35,
   },
   {
     id: 16,
-    title: "Arizona Radiation Regulatory Agency",
-    subtitle: "State Oversight",
-    content: "Arizona's radiation agency ensures safe use of radioactive materials and radiation-emitting devices.",
+    title: "Laws of the Laser",
+    subtitle: "Laws and Regulations",
+    content: "Agencies that ensure laser safety:\n\n• American National Standards Institute (ANSI)\n• National Institute of Occupational Health (NIOH)\n• Center for Devices and Radiological Health\n• Joint Commission on Accreditation of Healthcare Organizations\n• Emergency Care Research Institute\n\nNIOSH: The National Institute of Occupational Health (NIOH) is a federal agency created by OSHA to ensure healthy working conditions.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/DkgeTwClWAoiUJuj.wav",
-    audioDuration: 39,
+    audioDuration: 60,
   },
   {
     id: 17,
-    title: "Professional Certifications",
-    subtitle: "Industry Credentials",
-    content: "Various organizations offer professional certifications for laser technicians. Continuing education is often required.",
+    title: "Laws of the Laser",
+    subtitle: "Laws and Regulations",
+    content: "American Society of Laser Medicine and Surgery (ASMLS):\n• Professional society dedicated to the improvement of scientific research, education, and the safe and effective use of lasers in medicine.\n\nOccupational Safety and Health Administration (OSHA):\n• Responsible for ensuring a safe workplace\n• Has legal compliance capabilities, uses ANSI or ASLMS recommendations\n\nFood and Drug Administration (FDA):\n• Responsible for implementing and enforcing the Federal Laser Product Performance Standard and the Medical Device Amendment to the Food, Drug, and Cosmetic Act (FDCA)\n• Involved in complying with laser safety guidelines as they relate to the manufacture and sale of these devices.\n• The FDA clears lasers for safe use in the marketplace, certifies them, and approves them.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/THBfQlIbysnuAAih.wav",
-    audioDuration: 41,
+    audioDuration: 95,
   },
   {
     id: 18,
-    title: "Safety Protocols",
-    subtitle: "Best Practices",
-    content: "Always follow established safety protocols including proper eyewear, skin testing, and client consent procedures.",
+    title: "Laws of the Laser",
+    subtitle: "Laws and Regulations",
+    content: "American National Standards Institute (ANSI) ANSI Z136.3:\n\n• An organization of volunteer experts who participate in committees to set industry standards in various fields.\n\n• No legal authority\n\n• They developed the 4 laser hazard classifications\n\n• Used by OSHA and other federal agencies to set standards\n\n• ANSI Z136.1 is the standard for Safe Use of Lasers\n\n• ANSI Z136.3 is the standard for Laser Safety in Health Care Facilities",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/DbQbKJMOvTfUJUUW.wav",
-    audioDuration: 44,
+    audioDuration: 75,
   },
   {
     id: 19,
-    title: "Equipment Maintenance",
-    subtitle: "Keeping Systems Safe",
-    content: "Regular maintenance and calibration of laser equipment is essential for safety and effectiveness.",
+    title: "Laws of the Laser",
+    subtitle: "ANSI Laser Hazard Classifications",
+    content: "ANSI Laser Hazard Classifications:\n\n• Class 1: Inherently safe - no hazard during normal use\n\n• Class 2: Low power visible light lasers (less than 1 mW) - safe because of the blink reflex\n\n• Class 3A: Medium power lasers (1-5 mW) - hazardous if viewed directly\n\n• Class 3B: High power lasers (5-500 mW) - hazardous if viewed directly or from specular reflections\n\n• Class 4: Very high power lasers (greater than 500 mW) - hazardous from direct beam, diffuse reflections, and scattered radiation",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/kEDfReuNYkokNXBI.wav",
-    audioDuration: 40,
+    audioDuration: 85,
   },
   {
     id: 20,
-    title: "Client Consultation",
-    subtitle: "Pre-Procedure Assessment",
-    content: "Thorough client consultation identifies contraindications and ensures informed consent before any laser procedure.",
+    title: "Laws of the Laser",
+    subtitle: "Laser Safety Officer",
+    content: "Laser Safety Officer (LSO) Responsibilities:\n\n• Ensure compliance with laser safety regulations\n• Conduct laser safety training for all personnel\n• Maintain laser equipment and perform regular inspections\n• Manage incident reports and investigations\n• Establish and enforce laser safety protocols\n• Maintain records of laser use and maintenance\n• Coordinate with regulatory agencies\n• Ensure proper use of personal protective equipment (PPE)\n• Establish controlled areas and access restrictions\n• Conduct hazard assessments",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/cBdFIHCgLiyRNefp.wav",
-    audioDuration: 43,
+    audioDuration: 80,
   },
   {
     id: 21,
-    title: "Post-Procedure Care",
-    subtitle: "Client Instructions",
-    content: "Proper post-procedure care instructions reduce complications and ensure optimal results for clients.",
+    title: "Laws of the Laser",
+    subtitle: "When to File an Incident Report",
+    content: "When to File an Incident Report:\n\n• Any injury or adverse event related to laser use\n• Equipment malfunction or failure\n• Unauthorized laser use\n• Exposure to laser radiation beyond safe limits\n• Any near-miss incidents\n• Environmental hazards related to laser operation\n\nIncident Report Contents:\n• Date, time, and location of incident\n• Description of what happened\n• Personnel involved\n• Equipment involved\n• Injuries or damage\n• Corrective actions taken\n• Follow-up actions needed",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ppqaRAhpYXztuVpE.wav",
-    audioDuration: 38,
+    audioDuration: 75,
   },
   {
     id: 22,
-    title: "Continuing Education",
-    subtitle: "Professional Development",
-    content: "Stay current with industry changes through continuing education and professional development opportunities.",
+    title: "Laws of the Laser",
+    subtitle: "Laser Signage - Red Danger Sign",
+    content: "ANSI Class Laser Hazard Signage – Red Danger Sign\n\nRed = Laser is on and emitting, potential injury hazard.\n\nA red sign refers to \"DANGER\": A red light or sign often indicates that the laser is actively emitting a beam and that the area is potentially hazardous to enter. Red is universally associated with danger or potential injury, making it an effective warning color that is visible from a distance.\n\nSafety Status Indicators:\nRed = Laser is on and emitting, potential injury hazard.",
     audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
-    audioDuration: 36,
+    audioDuration: 65,
+  },
+  {
+    id: 23,
+    title: "Laws of the Laser",
+    subtitle: "Laser Signage - Yellow Caution Sign",
+    content: "ANSI Class Laser Hazard Signage – Yellow Caution Sign\n\nYellow = Caution - potential hazard\n\nA yellow sign refers to \"CAUTION\": Yellow signs are used to indicate a potential hazard that is less severe than a \"DANGER\" situation. Yellow caution signs alert personnel to potential hazards related to laser operation, such as areas where laser beams may be present or where laser equipment is in use.\n\nKey uses for the yellow caution sign:\n• Areas where laser beams may scatter or reflect\n• Temporary laser work areas\n• Training areas with active lasers\n• Maintenance areas where lasers are being serviced",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 70,
+  },
+  {
+    id: 24,
+    title: "Laws of the Laser",
+    subtitle: "Laser Signage - Orange Warning Sign",
+    content: "ANSI Class Laser Hazard Signage – Orange Warning Sign\n\nOrange = Warning - hazard present\n\nAn orange sign refers to \"WARNING\": Orange warning signs indicate a hazard that is more serious than a caution but less severe than danger. Orange signs are typically used in areas where laser equipment is present and active, alerting personnel to be aware of potential hazards.\n\nKey uses for the orange warning sign:\n• Active laser work areas\n• Areas with Class 3B or Class 4 lasers\n• High-risk laser operation zones\n• Areas requiring protective equipment",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 70,
+  },
+  {
+    id: 25,
+    title: "Laws of the Laser",
+    subtitle: "Laser Signage - Blue Notice Sign",
+    content: "ANSI Class Laser Hazard Signage – Blue Notice Sign\n\nWhite letters with Blue background\n\nA blue sign refers to \"NOTICE\": sign is used to convey general information and instructions related to facility policies or procedures that are not directly associated with the risk of personal injury from the laser itself. It is distinct from the red \"DANGER\", orange \"WARNING\", or yellow \"CAUTION\" signs, which indicate escalating levels of potential injury hazards.\n\nKey uses for the blue notice sign:\n• Temporary Conditions: The sign is often posted outside a temporary laser-controlled area during specific non-routine activities.\n• Maintenance/Service: It is required when activities such as laser repair, maintenance, or alignment are in progress\n• General Procedures: Such as \"Laser Repair In Progress\", \"Unattended Laser Operation\", \"Alignment in Process\"",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 85,
+  },
+  {
+    id: 26,
+    title: "Laws of the Laser",
+    subtitle: "Laser Signage Summary",
+    content: "Laser Safety Signage Summary:\n\nRed = DANGER - Laser is on and emitting\nOrange = WARNING - Hazard present, active laser area\nYellow = CAUTION - Potential hazard, scattered beams\nBlue = NOTICE - General information and procedures\n\nAll signage must be:\n• Clearly visible and readable\n• Placed at all laser work areas\n• Maintained in good condition\n• Updated as needed for current hazards",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 60,
+  },
+  {
+    id: 27,
+    title: "Laws of the Laser",
+    subtitle: "Laser Key Storage",
+    content: "ANSI Device and Key Storage - General Safety Guidelines\n\nAccording to ANSI-Z136.3, laser keys should be stored in a secure area when the laser is not in use.\n\n• Never leave the laser in ready mode unattended.\n• Always turn off the system when not in use.\n• Never allow untrained personnel to operate the laser system.\n• Never press the foot switch without first checking that the handpiece is oriented securely.",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 65,
+  },
+  {
+    id: 28,
+    title: "Laws of the Laser",
+    subtitle: "Laser Key Storage Details",
+    content: "ANSI Device and Key Storage - Safety Guidelines (Continued):\n\nCosmetic laser keys should be stored securely in a locked key cabinet or wall safe to ensure only authorized personnel have access. This is a crucial safety measure to prevent unauthorized operation of the high-powered laser equipment.\n\nSafety Guidelines:\n• Remove the key when not in use: The laser key must never be left in the laser unit when the machine is not in use.\n• Authorized Access Only: Only qualified and trained personnel should have access to the keys and operate the laser equipment.\n• Secure Location: The dedicated key storage unit should be located in a secure, controlled area with environmental controls.\n• Documented Procedure: Establish a clear, documented procedure for key sign-out/sign-in to maintain an audit trail.\n• Unattended Operation: If an operator needs to leave the room, the laser should be turned off, and the key should be removed and stored securely.",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 95,
+  },
+  {
+    id: 29,
+    title: "Laws of the Laser",
+    subtitle: "Personal Protective Equipment",
+    content: "Personal Protective Equipment (PPE) for Laser Operations:\n\n• Laser Safety Glasses: Wavelength-specific eyewear that blocks laser radiation\n• Face Shield: Additional protection for the face and eyes\n• Protective Gloves: Heat-resistant gloves to protect hands\n• Protective Clothing: Long sleeves and pants to protect skin\n• Closed-Toe Shoes: To protect feet from laser hazards\n• Hair Covering: To prevent hair from entering the laser beam path\n\nAll PPE must be:\n• Properly fitted and comfortable\n• Maintained in good condition\n• Replaced when damaged\n• Used consistently during all laser operations",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 75,
+  },
+  {
+    id: 30,
+    title: "Laws of the Laser",
+    subtitle: "Laser Safety Best Practices",
+    content: "Laser Safety Best Practices:\n\n• Never look directly into a laser beam\n• Never point a laser at anyone\n• Always wear appropriate PPE\n• Keep laser work areas clean and organized\n• Maintain equipment regularly\n• Follow all manufacturer guidelines\n• Report all incidents immediately\n• Participate in regular safety training\n• Keep emergency equipment accessible\n• Maintain proper documentation\n• Ensure proper ventilation in work areas\n• Use laser barriers and shields when appropriate",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 80,
+  },
+  {
+    id: 31,
+    title: "Laws of the Laser",
+    subtitle: "Chapter Summary",
+    content: "Chapter 1 Summary:\n\nYou have learned about:\n• The definition and career of a Certified Laser Technician\n• Arizona regulations and governing agencies\n• Laser industry trends and growth opportunities\n• ANSI laser classifications and safety standards\n• Government agencies that regulate laser use\n• Laser Safety Officer responsibilities\n• Incident reporting procedures\n• Laser signage and safety indicators\n• Key storage and security\n• Personal protective equipment\n• Laser safety best practices\n\nThis knowledge is essential for safe and compliant laser operation in Arizona.",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 80,
+  },
+  {
+    id: 32,
+    title: "Laws of the Laser",
+    subtitle: "Review & Quiz",
+    content: "Prepare for Chapter 1 Quiz\n\nYou have completed all the content for Chapter 1.\n\nNow it's time to test your knowledge with the Chapter 1 Quiz.\n\nRemember:\n• You must score 80% or higher to pass\n• You can retake the quiz if needed\n• Review the slides as many times as you need\n• Pay attention to the narration - answers may only be spoken\n\nGood luck!",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 45,
+  },
+  {
+    id: 33,
+    title: "Chapter 1 Complete",
+    subtitle: "Next Steps",
+    content: "Congratulations on completing Chapter 1!\n\nYou have successfully learned about:\n• Laser industry fundamentals\n• Arizona regulations and compliance\n• Safety standards and classifications\n• Professional responsibilities\n\nNext Steps:\n1. Review your quiz results\n2. If you scored 80% or higher, you're ready for Chapter 2\n3. If you need to improve, review the slides and retake the quiz\n4. Continue with your training journey\n\nThank you for your dedication to laser safety and professional excellence!",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663368558979/ywWcTqPwSahRWmtk.wav",
+    audioDuration: 60,
   },
 ];
 
@@ -297,7 +385,7 @@ export default function Chapter1Training() {
                 Chapter 1: Introduction to Laser Industry Laws & Agencies
               </h1>
               <p className="text-lg text-slate-600">
-                Slide {currentSlide + 1} of {totalSlides}
+                Slide {currentSlide + 1} of 33
               </p>
             </div>
             <div className="bg-white rounded-lg shadow p-4 text-center">
@@ -327,7 +415,7 @@ export default function Chapter1Training() {
                     {slide.subtitle}
                   </p>
                 </div>
-                <p className="text-lg text-slate-700 leading-relaxed">
+                <p className="text-lg text-slate-700 leading-relaxed whitespace-pre-wrap">
                   {slide.content}
                 </p>
               </div>
@@ -366,31 +454,27 @@ export default function Chapter1Training() {
 
                   <button
                     onClick={toggleMute}
-                    className="flex-shrink-0 hover:text-teal-400 transition"
+                    className="flex-shrink-0 text-slate-300 hover:text-white transition"
                   >
                     {isMuted ? (
-                      <VolumeX className="w-6 h-6" />
+                      <VolumeX className="w-5 h-5" />
                     ) : (
-                      <Volume2 className="w-6 h-6" />
+                      <Volume2 className="w-5 h-5" />
                     )}
                   </button>
                 </div>
 
                 <p className="text-sm text-slate-400 text-center">
-                  {audioFinished
-                    ? "✓ Audio complete. Click Next to continue."
-                    : "Click play to hear iZabel's expert narration"}
+                  Click play to hear Isabel's expert narration
                 </p>
               </div>
 
               {/* Navigation Buttons */}
               <div className="bg-slate-100 p-6 flex gap-4">
                 <Button
-                  onClick={handlePreviousSlide}
-                  disabled={true}
                   variant="outline"
-                  className="flex-1 opacity-50 cursor-not-allowed"
-                  title="Cannot go backward in training"
+                  disabled
+                  className="flex-1"
                 >
                   <ChevronLeft className="w-4 h-4 mr-2" />
                   Previous
@@ -398,17 +482,8 @@ export default function Chapter1Training() {
 
                 <Button
                   onClick={handleNextSlide}
-                  disabled={currentSlide === totalSlides - 1 || !audioFinished}
-                  className={`flex-1 ${
-                    audioFinished
-                      ? "bg-teal-600 hover:bg-teal-700"
-                      : "bg-slate-400 cursor-not-allowed"
-                  }`}
-                  title={
-                    !audioFinished
-                      ? "Please finish listening to the audio before advancing"
-                      : ""
-                  }
+                  disabled={!audioFinished || currentSlide === totalSlides - 1}
+                  className="flex-1 bg-teal-600 hover:bg-teal-700"
                 >
                   Next
                   <ChevronRight className="w-4 h-4 ml-2" />
@@ -417,66 +492,89 @@ export default function Chapter1Training() {
             </Card>
           </div>
 
-          {/* Sidebar: Progress & Info */}
-          <div className="lg:col-span-1">
-            {/* Progress Card */}
+          {/* Right Sidebar - Progress & Info */}
+          <div>
             <Card className="bg-white shadow-lg p-6 mb-6">
               <h3 className="text-lg font-bold text-slate-900 mb-4">
                 Your Progress
               </h3>
-              <div className="mb-4">
+
+              <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-slate-600">Completion</span>
+                  <span className="text-sm font-semibold text-slate-600">
+                    Completion
+                  </span>
                   <span className="text-lg font-bold text-teal-600">
                     {completionPercentage}%
                   </span>
                 </div>
-                <div className="bg-slate-200 rounded-full h-3">
+                <div className="w-full bg-slate-200 rounded-full h-3">
                   <div
                     className="bg-teal-600 h-3 rounded-full transition-all"
                     style={{ width: `${completionPercentage}%` }}
                   />
                 </div>
               </div>
-              <p className="text-sm text-slate-600">
-                Slide {currentSlide + 1} of {totalSlides}
+
+              <p className="text-sm text-slate-600 mb-4">
+                Slide {currentSlide + 1} of 33
               </p>
-              <p className="text-xs text-slate-500 mt-2">
+
+              <p className="text-xs text-slate-500 mb-4">
                 Progress only moves forward
               </p>
             </Card>
 
-            {/* Compliance Info */}
-            <Card className="bg-blue-50 border border-blue-200 shadow-lg p-6">
-              <h3 className="text-lg font-bold text-blue-900 mb-3">
+            <Card className="bg-white shadow-lg p-6">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">
                 Compliance Mode
               </h3>
-              <ul className="space-y-2 text-sm text-blue-800">
-                <li className="flex gap-2">
-                  <span className="text-blue-600 font-bold">✓</span>
-                  <span>All time is tracked</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-blue-600 font-bold">✓</span>
-                  <span>Cannot skip slides</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-blue-600 font-bold">✓</span>
-                  <span>Cannot go backward</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-blue-600 font-bold">✓</span>
-                  <span>Must finish audio</span>
-                </li>
-              </ul>
+
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    ✓
+                  </div>
+                  <span className="text-sm text-slate-700">
+                    All time is tracked
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    ✓
+                  </div>
+                  <span className="text-sm text-slate-700">
+                    Cannot skip slides
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    ✓
+                  </div>
+                  <span className="text-sm text-slate-700">
+                    Cannot go backward
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    ✓
+                  </div>
+                  <span className="text-sm text-slate-700">
+                    Must finish audio
+                  </span>
+                </div>
+              </div>
             </Card>
           </div>
         </div>
 
-        {/* Bottom Info */}
-        <div className="bg-white rounded-lg shadow p-6 text-center">
-          <p className="text-slate-600">
-            Narrated by iZabel • {totalSlides} slides • Approximately 45-60 minutes
+        {/* Footer */}
+        <div className="text-center text-slate-600 text-sm">
+          <p>
+            Narrated by Isabel • 33 slides • Approximately 45-60 minutes
           </p>
         </div>
       </div>
