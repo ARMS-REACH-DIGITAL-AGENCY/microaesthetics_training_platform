@@ -354,7 +354,7 @@ export default function Chapter1() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             {/* Slide image — full-bleed, no padding, 16:9 aspect ratio matching PPSX */}
             {slide.slideImage && (
-              <div className="w-full" style={{ aspectRatio: '16/9', background: '#000' }}>
+              <div className="w-full" style={{ aspectRatio: '4/3', background: '#000' }}>
                 <img
                   src={slide.slideImage}
                   alt={slide.title}
