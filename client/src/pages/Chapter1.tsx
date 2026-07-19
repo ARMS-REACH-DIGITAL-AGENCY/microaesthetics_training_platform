@@ -347,9 +347,11 @@ export default function Chapter1() {
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [quizScore, setQuizScore] = useState(0);
   const [showEnrollModal, setShowEnrollModal] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const slideContainerRef = useRef<HTMLDivElement>(null);
 
   const slide = SLIDES[currentSlide];
   const completedSlides = audioFinished.filter(Boolean).length;
@@ -371,6 +373,50 @@ export default function Chapter1() {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [audioPlaying]);
+
+  // ── Fullscreen helpers ───────────────────────────────────────────────────
+  function enterFullscreen() {
+    const el = slideContainerRef.current;
+    if (!el) return;
+    if (el.requestFullscreen) el.requestFullscreen();
+    else if ((el as any).webkitRequestFullscreen) (el as any).webkitRequestFullscreen();
+    setIsFullscreen(true);
+  }
+
+  function exitFullscreen() {
+    if (document.exitFullscreen) document.exitFullscreen();
+    else if ((document as any).webkitExitFullscreen) (document as any).webkitExitFullscreen();
+    setIsFullscreen(false);
+  }
+
+  function toggleFullscreen() {
+    if (isFullscreen) exitFullscreen(); else enterFullscreen();
+  }
+
+  // Sync isFullscreen state with browser fullscreen events
+  useEffect(() => {
+    function onFsChange() {
+      const fsEl = document.fullscreenElement || (document as any).webkitFullscreenElement;
+      setIsFullscreen(!!fsEl);
+    }
+    document.addEventListener('fullscreenchange', onFsChange);
+    document.addEventListener('webkitfullscreenchange', onFsChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', onFsChange);
+      document.removeEventListener('webkitfullscreenchange', onFsChange);
+    };
+  }, []);
+
+  // Auto-enter fullscreen when phone rotates to landscape
+  useEffect(() => {
+    function onOrientationChange() {
+      const landscape = window.innerWidth > window.innerHeight;
+      const fsEl = document.fullscreenElement || (document as any).webkitFullscreenElement;
+      if (landscape && !fsEl) enterFullscreen();
+    }
+    window.addEventListener('resize', onOrientationChange);
+    return () => window.removeEventListener('resize', onOrientationChange);
+  }, []);
 
   // ── Save progress to localStorage whenever key state changes
   useEffect(() => {
@@ -522,13 +568,37 @@ export default function Chapter1() {
         <div className="md:col-span-2">
           <div className="bg-white sm:rounded-xl shadow-sm border-y sm:border border-gray-200 overflow-hidden">
             {/* Slide image — full-bleed, 4:3 aspect ratio matching PPSX */}
-            <div className="w-full" style={{ aspectRatio: '4/3', background: '#000' }}>
+            <div
+              ref={slideContainerRef}
+              className="relative w-full bg-black"
+              style={{ aspectRatio: isFullscreen ? undefined : '4/3' }}
+            >
               <img
                 src={slide.slideImage}
                 alt={slide.title}
-                className="w-full h-full object-contain block"
+                className={isFullscreen
+                  ? "w-full h-full object-contain block"
+                  : "w-full h-full object-contain block"}
+                style={isFullscreen ? { width: '100vw', height: '100vh', objectFit: 'contain' } : {}}
                 loading="lazy"
               />
+              {/* Fullscreen toggle button */}
+              <button
+                onClick={toggleFullscreen}
+                className="absolute bottom-2 right-2 bg-black/60 hover:bg-black/80 text-white rounded p-1.5 transition-colors"
+                aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+                title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+              >
+                {isFullscreen ? (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M15 9h4.5M15 9V4.5M15 9l5.25-5.25M9 15H4.5M9 15v4.5M9 15l-5.25 5.25M15 15h4.5M15 15v4.5M15 15l5.25 5.25"/>
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                  </svg>
+                )}
+              </button>
             </div>
 
             {/* Slide caption */}
