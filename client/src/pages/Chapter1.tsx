@@ -24,18 +24,18 @@ const SLIDES = [
     title: "MicroAesthetics Laser Education",
     subtitle: "Chapter 1 — Introduction to the Laser Industry: AZ Laws & Agencies",
     content: "Welcome to your first class of the 40-hour Laser didactic training. MicroAesthetics Laser Education is an Arizona state licensed school of laser, a division of IzaBella Aesthetics, LLC in Phoenix, Arizona.",
-    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663380477995/frDfNbkMNdwxetub.m4a",
+    audioFile: "/manus-storage/slide1_audio_be29d284.m4a",
     audioDuration: 177,
-    slideImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663380477995/mwEGgURWbmAVbBwA.png"
+    slideImage: "/manus-storage/slide1_image_349f3bca.png"
   },
   {
     id: 2,
     title: "Laws of the Laser — Disclaimer",
     subtitle: "Important Information Before We Begin",
     content: "MicroAesthetics is an Arizona licensed laser training facility governed by ADHS and ARRA. This is a cosmetic laser course — treatments are for enhancement of appearance only and are NOT medical treatments.",
-    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663380477995/FeGezPtXykbVPyqQ.m4a",
+    audioFile: "/manus-storage/slide2_audio_a60a771b.m4a",
     audioDuration: 287,
-    slideImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663380477995/EnykswBXonAaDBGc.png"
+    slideImage: "/manus-storage/slide2_image_27ac1298.png"
   },
 ];
 
@@ -352,13 +352,13 @@ export default function Chapter1() {
         {/* Slide Content */}
         <div className="md:col-span-2">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            {/* Slide image */}
+            {/* Slide image — full-bleed, no padding, 16:9 aspect ratio matching PPSX */}
             {slide.slideImage && (
-              <div className="w-full bg-gray-100">
+              <div className="w-full" style={{ aspectRatio: '16/9', background: '#000' }}>
                 <img
                   src={slide.slideImage}
                   alt={slide.title}
-                  className="w-full object-contain max-h-[420px]"
+                  className="w-full h-full object-cover block"
                   loading="lazy"
                 />
               </div>
