@@ -24,18 +24,18 @@ const SLIDES = [
     title: "MicroAesthetics Laser Education",
     subtitle: "Chapter 1 — Introduction to the Laser Industry: AZ Laws & Agencies",
     content: "Welcome to your first class of the 40-hour Laser didactic training. MicroAesthetics Laser Education is an Arizona state licensed school of laser, a division of IzaBella Aesthetics, LLC in Phoenix, Arizona.",
-    audioFile: "/manus-storage/slide1_audio_be29d284.m4a",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663380477995/frDfNbkMNdwxetub.m4a",
     audioDuration: 177,
-    slideImage: "/manus-storage/slide1_image_349f3bca.png"
+    slideImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663380477995/mwEGgURWbmAVbBwA.png"
   },
   {
     id: 2,
     title: "Laws of the Laser — Disclaimer",
     subtitle: "Important Information Before We Begin",
     content: "MicroAesthetics is an Arizona licensed laser training facility governed by ADHS and ARRA. This is a cosmetic laser course — treatments are for enhancement of appearance only and are NOT medical treatments.",
-    audioFile: "/manus-storage/slide2_audio_a60a771b.m4a",
+    audioFile: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663380477995/FeGezPtXykbVPyqQ.m4a",
     audioDuration: 287,
-    slideImage: "/manus-storage/slide2_image_27ac1298.png"
+    slideImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663380477995/EnykswBXonAaDBGc.png"
   },
 ];
 
