@@ -517,10 +517,10 @@ export default function Chapter1() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-6 grid md:grid-cols-3 gap-6">
+      <div className="max-w-4xl mx-auto px-0 sm:px-4 py-4 sm:py-6 grid md:grid-cols-3 gap-4 sm:gap-6">
         {/* Slide Content */}
         <div className="md:col-span-2">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+          <div className="bg-white sm:rounded-xl shadow-sm border-y sm:border border-gray-200 overflow-hidden">
             {/* Slide image — full-bleed, 4:3 aspect ratio matching PPSX */}
             <div className="w-full" style={{ aspectRatio: '4/3', background: '#000' }}>
               <img
@@ -577,7 +577,7 @@ export default function Chapter1() {
           </div>
 
           {/* Slide Notes */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 mt-4 overflow-hidden">
+          <div className="bg-white sm:rounded-xl shadow-sm border-y sm:border border-gray-200 mt-3 sm:mt-4 overflow-hidden">
             <div className="flex items-center gap-2 px-5 py-3 border-b border-gray-100 bg-gray-50">
               <svg className="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -595,7 +595,7 @@ export default function Chapter1() {
           </div>
 
           {/* Three Paths CTA */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-2">
+          <div className="bg-white sm:rounded-xl shadow-sm border-y sm:border border-gray-200 px-4 sm:px-6 py-4 sm:py-6 mt-3 sm:mt-2">
             <div className="text-center mb-5">
               <p className="text-xs font-semibold text-teal-600 uppercase tracking-widest mb-1">One Institute. Three Paths.</p>
               <h2 className="text-xl font-bold text-gray-900 mb-1">Ready to Go Further?</h2>
@@ -666,7 +666,7 @@ export default function Chapter1() {
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-4">
+        <div className="space-y-4 px-4 sm:px-0">
           {/* Progress */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
             <h3 className="font-semibold text-gray-900 mb-3">Your Progress</h3>
