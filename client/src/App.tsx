@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Landing from "./pages/Landing";
 import LeadCapture from "./pages/LeadCapture";
 import Chapter1 from "./pages/Chapter1";
+import Orientation from "./pages/Orientation";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       <Route path={"/"} component={Landing} />
       <Route path={"/lead-capture"} component={LeadCapture} />
       <Route path={"/chapter1"} component={Chapter1} />
+      <Route path={"/orientation"} component={Orientation} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
